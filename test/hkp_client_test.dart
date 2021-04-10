@@ -1,0 +1,73 @@
+import 'package:flutter_test/flutter_test.dart';
+
+import 'package:hkp_client/hkp_client.dart';
+
+const String pubkey = '''-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+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
+DV8u/wZe9KZ5HMFjvaLQ1w==
+=HHbu
+-----END PGP PUBLIC KEY BLOCK-----''';
+
+const String fingerprint = '1DF1 5F75 8EC0 09E3 2072  35AB D71E 3E1E 8CF7 D491';
+const String email = 'keytest@hyclusive.de';
+
+void main() {
+  HkpClient openpgp = new HkpClient('https://keys.openpgp.org');
+  test('upload key for keytes@hyclusive.de', () async {
+    String ret = (await openpgp.addKey(pubkey));
+    return ret.contains('successful');
+  });
+  test('get key for keytest@hyclusive.de', () async {
+    String ret1 = (await openpgp.getKey(email));
+    String ret2 = (await openpgp.getKey(fingerprint));
+
+    return ret1.contains(pubkey) && ret2.contains(pubkey);
+  });
+}
