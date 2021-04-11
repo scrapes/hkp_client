@@ -1,5 +1,5 @@
 name: hkp_client
-description: HKP Keyserver Client
+description: Basic Keyserver Client for the HKP key exchange formate based on RFC draft  draft-shaw-openpgp-hkp-00.txt
 version: 0.0.1
 homepage: https://anwski.de
 

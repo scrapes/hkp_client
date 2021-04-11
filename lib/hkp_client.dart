@@ -3,7 +3,10 @@ library hkp_client;
 import 'package:http/http.dart' as http;
 
 class HkpClient {
+  /// API URL
   String __url;
+
+  /// Constructor
   HkpClient(String url) {
     this.__url = url;
 
