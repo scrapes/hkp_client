@@ -1,3 +1,7 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.1] - Released 11.04.2021
 
-* TODO: Describe initial release.
+* initial Release containing the Very Basics of the HKP Protocl Draft
+
+## [0.0.2] - Released 11.04.2021
+
+* Added further documentation and description. 
